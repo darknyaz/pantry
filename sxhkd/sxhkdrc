@@ -1,0 +1,24 @@
+# Change layout
+Shift_L + Alt_L
+     setxkbmap -query | grep -qE '^layout:\s*ru' && setxkbmap us || setxkbmap ru,us
+
+# Increase volume
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +1000
+
+# Decrease volume
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -1000
+
+# Mute volume
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Increase brightnes
+XF86MonBrightnessUp
+    backlight_control +5
+
+# Decrease brightness
+XF86MonBrightnessDown
+    backlight_control -5
+
