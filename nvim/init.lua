@@ -1,7 +1,3 @@
-if vim.g["vscode"] then
-    require("os").exit()
-end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -22,3 +18,9 @@ vim.opt.runtimepath:prepend(lazypath)
 vim.loader.enable()
 
 require("lazy").setup("plugins")
+
+vim.cmd [[set background=light]]
+vim.cmd [[let g:gruvbox_contrast_light = "hard"]]
+vim.cmd [[let g:gruvbox_contrast_dark = "soft"]]
+vim.cmd [[colorscheme gruvbox]]
+

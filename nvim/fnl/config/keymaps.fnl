@@ -21,7 +21,12 @@
    ["n" "<C-j>" "<C-w>j"]
    ["n" "<C-h>" "<C-w>h"]
    ["n" "<C-k>" "<C-w>k"]
-   ["n" "<C-l>" "<C-w>l"]])
+   ["n" "<C-l>" "<C-w>l"]
+   ;; fzf
+   ["n" "<Leader>ff" ":Telescope find_files<CR>"]
+   ["n" "<Leader>fb" ":Telescope buffers<CR>"]
+   ["n" "<Leader>fg" ":Telescope live_grep<CR>"]
+   ["n" "<Leader>fh" ":Telescope help_tags<CR>"]])
 
 (each [_ mapping (ipairs mappings)]
   (set-mapping (unpack mapping)))
